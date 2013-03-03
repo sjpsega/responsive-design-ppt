@@ -1,0 +1,201 @@
+!!!5
+html
+    head
+        meta(charset="utf-8")
+        title beechart
+        meta(name="description",content="beechart图表介绍以及比较")
+        meta(name="keywords",content="beechart ppt")
+        link(rel="stylesheet",href="css/webslide.css")
+        link(rel="stylesheet",href="css/codecolorer.css")
+        style
+            .cream{
+                background-color:#FFFFCC
+            }
+            .orange{
+                background-color:#FF6600
+            }
+            .green{
+                background-color:#99CC00
+            }
+            table {
+              width: 100%;
+              padding: 0;
+              margin: 0;
+              font-size: 20px;
+            }
+            table thead th {
+              color: #000;
+              border: 1px solid #000;
+              letter-spacing: 2px;
+              text-align: center;
+              padding: 6px 6px 6px 12px;
+            }
+            table tbody td {
+              border: 1px solid #000;
+              padding: 6px 6px 6px 12px;
+              text-align: center;
+              color: #000;
+            }
+            .table-wrapper{
+                position: absolute;
+                top: 50%;
+                height: 390px;
+                margin-top: -195px;
+                width:900px;
+            }
+    body   
+        #slide
+            .slides
+                section#cover.step
+                    section.title
+                        h1 BeeChart图表介绍
+                        h2 B2B - 沈剑平
+                section#slide2.step.slide
+                    h1 分享主题
+                    ul 
+                        li 为何开发自己的图表
+                        li 名字的由来
+                        li 图表演示
+                        li 与其他图表的比较
+                section#slide3.step.slide.rebuild
+                    h1 为何开发自己的图表
+                    ul(data-build)
+                        li 当时中文站广泛使用FusionChart，FusionChart交互效果一般
+                        li 设计师对交互的要求越来越高，现有图表无法满足，改造成本大
+                        li 自主开发、自主设计、自定视觉规范，满足项目需要
+                section#slide4.step.slide.rebuild
+                    h1 名字的由来
+                    ul(data-build)
+                        li 原名YID，YID == YES I DO
+                        li 开源的需要，YID在英语中有贬低犹太人的意思，经讨论，改名为BeeChart
+                section#slide5.step.slide
+                    h1 图表演示
+                    br
+                    a(href="http://sjpsega.github.com/beechart/demo.html",target="_blank") 现有图表DEMO
+                    br
+                    br
+                    a(href="http://sjpsega.github.com/beechart/charteditor.html",target="_blank") 图表编辑器(1.5)
+                section#slide6.step.slide
+                    h1 与其他图表的比较
+                    .table-wrapper
+                        table
+                            thead.cream
+                                tr
+                                    th
+                                    th FusionChart
+                                    th amChart
+                                    th AnyChart
+                                    th HighChart
+                                    th BeeChart
+                            tbody
+                                tr
+                                    td.cream 是否收费
+                                    td 收费
+                                    td 收费
+                                    td 收费
+                                    td 收费
+                                    td.green 免费、开源
+                                tr
+                                    td.cream flash版本
+                                    td 有
+                                    td 有
+                                    td 有
+                                    td.orange 无
+                                    td 有
+                                tr
+                                    td.cream js版本
+                                    td 有
+                                    td 有
+                                    td 有
+                                    td 有
+                                    td.orange 无
+                                tr
+                                    td.cream 特点
+                                    td 图表类型全面，交互效果一般
+                                    td 图表类型较全，交互效果较好
+                                    td 图表类型全面，交互效果较好
+                                    td.green 图表类型较全，交互效果好
+                                    td.green 图表类型少，交互效果好
+                section#slide7.step.slide
+                    h1 图表在集团中的使用情况
+                    .table-wrapper
+                        table
+                            thead.cream
+                                tr
+                                    th(style="width:20%;") FusionChart
+                                    th(style="width:20%;") amChart
+                                    th(style="width:20%;") AnyChart
+                                    th(style="width:20%;") HighChart
+                                    th(style="width:20%;") BeeChart
+                            tbody
+                                tr
+                                    td 
+                                        a(href="http://jiage.china.alibaba.com/price/trend/c27787-t95524-a2277-rpm-d12-11-27.html?sourceForm=%CA%D0%B3%A1%BC%DB",target="_blank") 中文站价格行情
+                                    td 淘宝量子统计、中文站监控dargon、傻瓜数据平台、一淘比价
+                                    td 
+                                    td 淘宝卖家店铺数据、
+                                        a(href="http://kelude.taobao.net/reports?",target="_blank") 淘宝后台报表kelued
+                                        、
+                                        a(href="http://s.etao.com/item/1377084.html?spm=0.0.0.41.FvMMJ6&stp=etao.etao_dpdetail.cp.tp",target="_blank") 一淘价格走势
+                                        、
+                                        a(href="http://price.etao.com/report.htm?",target="_blank") 一淘全网价格
+                                    td work平台、
+                                        a(href="http://work.china.alibaba.com/home/page/index.htm?app=accountmanagement&menu=contact#app=bizservice",target="_blank")生意参谋
+                                        、
+                                        a(href="http://info.china.alibaba.com/",target="_blank") 资讯频道
+                section#slide8.step.slide.rebuild
+                    h1 BeeChart与HighChart
+                    .table-wrapper(data-build)
+                        div(style="margin-bottom: 20px;")
+                            a(href="line-compare.html",target="_blank") HighChart、BeeChart折线图比较
+                        table
+                            thead.cream
+                                tr
+                                    th(style="width:20%;")
+                                    th(style="width:40%;") HighChart
+                                    th(style="width:40%;") BeeChart
+                            tbody
+                                tr
+                                    td 是否收费
+                                    td.orange 收费
+                                    td 免费开源
+                                tr
+                                    td 桌面
+                                    td OK
+                                    td OK
+                                tr
+                                    td 移动
+                                    td OK
+                                    td.orange X
+                                tr
+                                    td 图表类型
+                                    td 较全
+                                    td.orange 少
+                                tr
+                                    td 交互效果
+                                    td 好
+                                    td 好
+                                tr
+                                    td 图表配置工具
+                                    td.orange 无
+                                    td 开发中
+                section#slide9.step.slide.rebuild
+                    h1 小结
+                    ul
+                        li 小网站应用 ——> 免费开源的BeeChart
+                        li 移动开发 ——> HighChart
+                        li 桌面，图表类型使用经典的柱形、饼图、曲线 ——> BeeChart
+                        li 桌面，需要的图表类型较丰富 ——> HighChart
+                section#slide10.step.slide
+                    section.title
+                        h2 Q & A
+            .progress
+                span
+        canvas#myCanvas(width="100%",height="100%") 您的浏览器不支持HTML5,请升级或更换您的浏览器,强烈推荐您使用chrome浏览器。
+        menu#slideCtrl.controls
+            span.tool.home(nclick="location.hash='#cover'") !
+            span.tool.paint p
+            span.tool.clearIt d
+        script(src="js/webslide.js")
+
+
