@@ -31,7 +31,7 @@ module.exports = function( grunt ) {
 	    connect:{
 	 		server: {
 	 			options:{
-	 				port: 80,
+	 				port: 8080,
 		      		base: '.'
 	 			}
 		    }
