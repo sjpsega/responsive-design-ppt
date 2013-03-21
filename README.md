@@ -1,4 +1,4 @@
-beechart-ppt
+responsive-design-ppt
 ============
 
-beechat图表介绍以及与其他图表的比较
+响应式设计PPT

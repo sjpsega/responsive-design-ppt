@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>beechart</title>
-    <meta name="description" content="beechart图表介绍以及比较">
-    <meta name="keywords" content="beechart ppt">
+    <title>响应式设计</title>
+    <meta name="description" content="响应式设计">
+    <meta name="keywords" content="响应式设计 ppt">
     <link rel="stylesheet" href="css/webslide.css">
     <link rel="stylesheet" href="css/codecolorer.css">
+    <base target="_blank">
     <style>
       .cream{
           background-color:#FFFFCC
@@ -60,155 +61,131 @@
             <li>什么是响应式设计</li>
             <li>响应式设计的要点</li>
             <li>咬了一口的苹果</li>
+            <li>还差了点什么？</li>
             <li>响应式设计是万金油么？</li>
           </ul>
         </section>
         <section id="slide3" class="step slide rebuild">
           <h1>什么是响应式设计</h1>
           <ul data-build>
-            <li>出现的最大原因：移动互联网高速发展，随着移动互联网的兴起，也带来了一个问题，就是如何搭建一个网站，可以适合所有用户访问。行业对于这个问题的回答是响应式设计。</li>
+            <li>背景:移动互联网高速发展，各种设备层出不穷，iPhone、ipad、黑莓、kindle...在各种设备上，因为分辨率不同，访问传统网站，达不到良好的用户体验。</li>
+            <li>定义:一套解决方案，适合各种分辨率的设备，可以适合所有用户访问。</li>
           </ul>
         </section>
         <section id="slide4" class="step slide rebuild">
-          <h1>响应式设计并不神秘</h1>
-          <ul data-build>
-            <li>响应式设计 == 流体布局 + 媒体查询</li>
+          <h1>旺仔题</h1>
+          <ul>
+            <li>举3个使用响应式设计的网站</li>
           </ul>
         </section>
-        <section id="slide5" class="step slide">
-          <h1>图表演示</h1><br><a href="http://sjpsega.github.com/beechart/demo.html" target="_blank">现有图表DEMO</a><br><br><a href="http://sjpsega.github.com/beechart/charteditor.html" target="_blank">图表编辑器(1.5)</a>
+        <section id="slide5" class="step slide rebuild">
+          <h1>响应式设计的要点</h1>
+          <ul data-build>
+            <li>CSS3 媒体查询</li>
+            <li>灵活的布局</li>
+            <li>弹性的媒体</li>
+          </ul>
         </section>
         <section id="slide6" class="step slide">
-          <h1>与其他图表的比较</h1>
-          <div class="table-wrapper">
-            <table>
-              <thead class="cream">
-                <tr>
-                  <th></th>
-                  <th>FusionChart</th>
-                  <th>amChart</th>
-                  <th>AnyChart</th>
-                  <th>HighChart</th>
-                  <th>BeeChart</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="cream">是否收费</td>
-                  <td>收费</td>
-                  <td>收费</td>
-                  <td>收费</td>
-                  <td>收费</td>
-                  <td class="green">免费、开源</td>
-                </tr>
-                <tr>
-                  <td class="cream">flash版本</td>
-                  <td>有</td>
-                  <td>有</td>
-                  <td>有</td>
-                  <td class="orange">无</td>
-                  <td>有</td>
-                </tr>
-                <tr>
-                  <td class="cream">js版本</td>
-                  <td>有</td>
-                  <td>有</td>
-                  <td>有</td>
-                  <td>有</td>
-                  <td class="orange">无</td>
-                </tr>
-                <tr>
-                  <td class="cream">特点</td>
-                  <td>图表类型全面，交互效果一般</td>
-                  <td>图表类型较全，交互效果较好</td>
-                  <td>图表类型全面，交互效果较好</td>
-                  <td class="green">图表类型较全，交互效果好</td>
-                  <td class="green">图表类型少，交互效果好</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h1>CSS3 媒体查询</h1>
         </section>
-        <section id="slide7" class="step slide">
-          <h1>图表在集团中的使用情况</h1>
-          <div class="table-wrapper">
-            <table>
-              <thead class="cream">
-                <tr>
-                  <th style="width:20%;">FusionChart</th>
-                  <th style="width:20%;">amChart</th>
-                  <th style="width:20%;">AnyChart</th>
-                  <th style="width:20%;">HighChart</th>
-                  <th style="width:20%;">BeeChart</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td> <a href="http://jiage.china.alibaba.com/price/trend/c27787-t95524-a2277-rpm-d12-11-27.html?sourceForm=%CA%D0%B3%A1%BC%DB" target="_blank">中文站价格行情</a></td>
-                  <td>淘宝量子统计、中文站监控dargon、傻瓜数据平台、一淘比价</td>
-                  <td> </td>
-                  <td>淘宝卖家店铺数据、<a href="http://kelude.taobao.net/reports?" target="_blank">淘宝后台报表kelued</a>、<a href="http://s.etao.com/item/1377084.html?spm=0.0.0.41.FvMMJ6&amp;stp=etao.etao_dpdetail.cp.tp" target="_blank">一淘价格走势</a>、<a href="http://price.etao.com/report.htm?" target="_blank">一淘全网价格</a></td>
-                  <td>work平台、<a href="http://work.china.alibaba.com/home/page/index.htm?app=accountmanagement&amp;menu=contact#app=bizservice" target="_blank">生意参谋</a>、<a href="http://info.china.alibaba.com/" target="_blank">资讯频道</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <section id="slide7" class="step slide rebuild">
+          <h1>旺仔题</h1>
+          <ul>
+            <li>举3个HTML4的媒体查询关键字</li>
+          </ul>
         </section>
         <section id="slide8" class="step slide rebuild">
-          <h1>BeeChart与HighChart</h1>
-          <div data-build class="table-wrapper">
-            <div style="margin-bottom: 20px;"><a href="line-compare.html" target="_blank">HighChart、BeeChart折线图比较</a></div>
-            <table>
-              <thead class="cream">
-                <tr>
-                  <th style="width:20%;"></th>
-                  <th style="width:40%;">HighChart</th>
-                  <th style="width:40%;">BeeChart</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>是否收费</td>
-                  <td class="orange">收费</td>
-                  <td>免费开源</td>
-                </tr>
-                <tr>
-                  <td>桌面</td>
-                  <td>OK</td>
-                  <td>OK</td>
-                </tr>
-                <tr>
-                  <td>移动</td>
-                  <td>OK</td>
-                  <td class="orange">X</td>
-                </tr>
-                <tr>
-                  <td>图表类型</td>
-                  <td>较全</td>
-                  <td class="orange">少</td>
-                </tr>
-                <tr>
-                  <td>交互效果</td>
-                  <td>好</td>
-                  <td>好</td>
-                </tr>
-                <tr>
-                  <td>图表配置工具</td>
-                  <td class="orange">无</td>
-                  <td>开发中</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <h1>HTML4的媒体查询</h1>
+          <ul>
+            <li>screen</li>
+            <li>print</li>
+            <li>handheld</li>
+            <li>tv</li>
+            <li>braille</li>
+            <li>projection</li>
+          </ul>
         </section>
         <section id="slide9" class="step slide rebuild">
-          <h1>小结</h1>
+          <h2>HTML5的媒体查询</h2>
           <ul>
-            <li>小网站应用 ——> 免费开源的BeeChart</li>
-            <li>移动开发 ——> HighChart</li>
-            <li>桌面，图表类型使用经典的柱形、饼图、曲线 ——> BeeChart</li>
-            <li>桌面，需要的图表类型较丰富 ——> HighChart</li>
+            <li>width(max/min)</li>
+            <li>height(max/min)</li>
+            <li>device-width(max/min)</li>
+            <li>device-height(max/min)</li>
           </ul>
+          <h2>逻辑运算符</h2>
+          <ul>
+            <li>and</li>
+            <li>not</li>
+            <li>only</li>
+            <li>,(or)</li>
+          </ul>
+        </section>
+        <section id="slide10" class="step slide rebuild">
+          <h2>例子</h2>
+        </section>
+        <section id="slide11" class="step slide rebuild">
+          <h1>灵活的布局</h1><br>
+          <ul>两种不同类型
+            <li>流体布局</li>
+            <li>栅格布局</li>
+          </ul>
+        </section>
+        <section id="slide12" class="step slide rebuild">
+          <h1>流体布局</h1><br>
+          <div>使用相对长度，通常是百分比或是em</div>
+          <div>代码</div>
+          <div>典型：<a href="http://twitter.github.com/bootstrap/">BootStrap</a></div>
+        </section>
+        <section id="slide13" class="step slide rebuild">
+          <h1>固定布局</h1><br>
+          <div>使用媒体查询，根据分辨率修改布局</div>
+          <div>代码</div>
+          <div>典型：<a href="http://www.etao.com/?tbpm=t">一淘</a></div>
+        </section>
+        <section id="slide14" class="step slide rebuild">
+          <h1>弹性的媒体</h1><br>
+          <div>使用百分比设置img、video、canvas的宽度</div>
+          <div>代码:</div>
+          <pre><img>}</pre>
+          <div>典型：<a href="http://d.alistapart.com/responsive-web-design/ex/ex-site-flexible.html">流体图片</a></div>
+        </section>
+        <section id="slide15" class="step slide rebuild">
+          <h1>流体图片造成的问题</h1><br>
+          <div>在小尺寸设备上浪费带宽</div>
+        </section>
+        <section id="slide16" class="step slide rebuild">
+          <h1>断点图片</h1><br>
+        </section>
+        <section id="slide17" class="step slide rebuild">
+          <h1>咬了一口的苹果</h1>
+          <ul>Apple 视网膜屏带来的问题
+            <li>img图片模糊</li>
+          </ul>
+        </section>
+        <section id="slide18" class="step slide rebuild">
+          <h1>还差了点什么？</h1>
+          <ul> 
+            <li>有了面子，还要里子</li>
+            <li>优化手持设备的交互</li>
+          </ul>
+        </section>
+        <section id="slide19" class="step slide rebuild">
+          <h1>旺仔题</h1>
+          <ul>
+            <li>在移动设备上浏览首页，会碰到的交互问题</li>
+          </ul>
+        </section>
+        <section id="slide20" class="step slide rebuild">
+          <h1>解决途径</h1>
+          <ul>
+            <li>去除hover交互</li>
+          </ul>
+        </section>
+        <section id="slide18" class="step slide rebuild">
+          <h1>响应式设计是万金油么？</h1>
+          <ul> </ul>
         </section>
         <section id="slide10" class="step slide">
           <section class="title">
