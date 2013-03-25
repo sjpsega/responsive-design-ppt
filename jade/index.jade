@@ -6,7 +6,7 @@ html
         meta(name="description",content="响应式设计")
         meta(name="keywords",content="响应式设计 ppt")
         link(rel="stylesheet",href="css/webslide.css")
-        link(rel="stylesheet",href="css/codecolorer.css")
+        link(rel="stylesheet",href="css/sons-of-obsidian.css")
         base(target="_blank")
         style
             .cream{
@@ -51,9 +51,9 @@ html
                     section.title
                         h1 响应式设计
                         h2 B2B - 沈剑平
-                section#slide2.step.slide
+                section#slide2.step.slide.rebuild
                     h1 分享主题
-                    ul 
+                    ul(data-build)
                         li 什么是响应式设计
                         li 响应式设计的要点
                         li 咬了一口的苹果
@@ -82,69 +82,127 @@ html
                         li 举3个HTML4的媒体查询关键字
                 section#slide8.step.slide.rebuild
                     h1 HTML4的媒体查询
-                    ul
-                        li screen
-                        li print
-                        li handheld
-                        li tv
-                        li braille
-                        li projection
+                    div(data-build) 
+                        ul 关键字
+                            li screen
+                            li print
+                            li handheld
+                            li tv
+                            li braille
+                            li projection
                 section#slide9.step.slide.rebuild
                     h2 HTML5的媒体查询
-                    ul
-                        li width(max/min)
-                        li height(max/min)
-                        li device-width(max/min)
-                        li device-height(max/min)
-                    h2 逻辑运算符
-                    ul
-                        li and
-                        li not
-                        li only
-                        li ,(or)
+                    div(data-build) 
+                        ul 关键字
+                            li width(max/min)
+                            li height(max/min)
+                            li device-width(max/min)
+                            li device-height(max/min)
+                            li ……
+                    div(data-build) 
+                        ul 逻辑运算符
+                            li and
+                            li not
+                            li only
+                            li ,(or)
                 section#slide10.step.slide.rebuild
                     h2 例子
+                    div(data-build)
+                        pre.lang-css.
+                            /*只在普通屏幕下,并且,宽度小于959px*/
+                            @media only screen and (max-width: 959px) {}
+                        pre.lang-css.
+                            /*宽度小于959px,或,高度小于800px*/
+                            @media (max-width: 959px),(max-height:800px) {}
                 section#slide11.step.slide.rebuild
                     h1 灵活的布局
                     br
                     ul 两种不同类型
-                        li 流体布局
+                        li 类流体布局
                         li 栅格布局
                 section#slide12.step.slide.rebuild
-                    h1 流体布局
+                    h1 类流体布局
                     br
-                    div 使用相对长度，通常是百分比或是em
-                    div 代码
-                    div 典型：
-                        a(href="http://twitter.github.com/bootstrap/") BootStrap
+                    div 与流体布局一样，使用相对长度，通常是百分比或是em
+                    div(data-build) 
+                        div 代码
+                            pre.lang-css.
+                                .row-fluid {
+                                    width: 100%;
+                                }
+                                .row-fluid .span3 {
+                                    font-size: 1.125em;
+                                }
+                    div(data-build)
+                        div 但在过宽过长时，需要专门针对某些布局结构进行样式覆写
+                    div(data-build) 
+                        div 典型：
+                            a(href="http://twitter.github.com/bootstrap/examples/fluid.html") Bootstrap fluid
                 section#slide13.step.slide.rebuild
                     h1 固定布局
                     br
                     div 使用媒体查询，根据分辨率修改布局
-                    div 代码
-                    div 典型：
-                        a(href="http://www.etao.com/?tbpm=t") 一淘
                 section#slide14.step.slide.rebuild
+                    div 常用设备分辨率
+                    img(src="img/breakpoints.jpg",style="width: 35%;height: 85%;")
+                section#slide15.step.slide.rebuild
+                    div 使用媒体查询，根据分辨率修改布局
+                    div(data-build) 
+                        div 代码:
+                        pre.lang-css.
+                            /* 正常PC液晶屏样式 */
+                            /* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
+                            @media only screen and (max-width: 959px) {}
+                            /* 仅iPad 竖版，以及所有小于（不等于）标准960宽度的平板电脑的竖版 */
+                            @media only screen and (min-width: 768px) and (max-width: 959px) {}
+                            /* iPhone 及以下 */
+                            @media only screen and (max-width: 767px) {}
+                            /* 仅iPhone 横版，包括某些平板电脑的竖版 */
+                            @media only screen and (min-width: 480px) and (max-width: 767px) {}
+                            /* 仅iphone4 竖版 */
+                            @media only screen and (max-width: 479px) {}
+                    div(data-build) 
+                        div 典型：
+                            a(href="http://www.etao.com/?tbpm=t") 一淘
+                section#slide16.step.slide.rebuild
                     h1 弹性的媒体
                     br
                     div 使用百分比设置img、video、canvas的宽度
-                    div 代码:
-                    pre
-                        img, video, canvas {
-                          max-width: 100%;
-                        }
-                    div 典型：
-                        a(href="http://d.alistapart.com/responsive-web-design/ex/ex-site-flexible.html") 流体图片
+                    div(data-build) 
+                        div 代码:
+                            pre.lang-css.
+                                img, video, canvas {
+                                  max-width: 100%;
+                                }
+                    div(data-build) 
+                        div 典型：
+                            a(href="http://d.alistapart.com/responsive-web-design/ex/ex-site-flexible.html") 流体图片
                 section#slide15.step.slide.rebuild
                     h1 流体图片造成的问题
                     br
-                    div 在小尺寸设备上浪费带宽
+                    div 如果使用大图片，在小尺寸设备上显示浪费带宽
                 section#slide16.step.slide.rebuild
-                    h1 断点图片
+                    h1 解决方案：断点图片
                     br
+                    div(data-build)
+                        div 代码:
+                        pre.lang-css.
+                            /* 正常PC液晶屏样式 */
+                            //图片1
+                            /* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
+                            @media only screen and (max-width: 959px) {
+                            //图片2
+                            }
+                            /* 仅iPad 竖版，以及所有小于（不等于）标准960宽度的平板电脑的竖版 */
+                            @media only screen and (min-width: 768px) and (max-width: 959px) {
+                            //图片3
+                            }
+                            ……
                 section#slide17.step.slide.rebuild
                     h1 咬了一口的苹果
-                    ul Apple 视网膜屏带来的问题
+                    div(data-build)
+                    ul Apple的视网膜屏(Retina)
+                    ul 带来的问题
                         li img图片模糊
                 section#slide18.step.slide.rebuild
                     h1 还差了点什么？
@@ -172,6 +230,17 @@ html
             span.tool.home(nclick="location.hash='#cover'") !
             span.tool.paint p
             span.tool.clearIt d
+        script(src="js/jquery-1.7.2.js")
         script(src="js/webslide.js")
+        script(src="js/google-code-prettify/prettify.js")
+        script(src="js/google-code-prettify/lang-css.js")
+        script
+            jQuery(function(){
+               //给pre段落增加class，并调用初始化方法
+                $("pre").each(function(index,item){
+                   $(item).addClass("prettyprint").addClass("linenums");
+                });
+                prettyPrint();
+            })
 
 

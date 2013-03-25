@@ -6,7 +6,7 @@
     <meta name="description" content="响应式设计">
     <meta name="keywords" content="响应式设计 ppt">
     <link rel="stylesheet" href="css/webslide.css">
-    <link rel="stylesheet" href="css/codecolorer.css">
+    <link rel="stylesheet" href="css/sons-of-obsidian.css">
     <base target="_blank">
     <style>
       .cream{
@@ -55,9 +55,9 @@
             <h2>B2B - 沈剑平</h2>
           </section>
         </section>
-        <section id="slide2" class="step slide">
+        <section id="slide2" class="step slide rebuild">
           <h1>分享主题</h1>
-          <ul> 
+          <ul data-build>
             <li>什么是响应式设计</li>
             <li>响应式设计的要点</li>
             <li>咬了一口的苹果</li>
@@ -97,70 +97,140 @@
         </section>
         <section id="slide8" class="step slide rebuild">
           <h1>HTML4的媒体查询</h1>
-          <ul>
-            <li>screen</li>
-            <li>print</li>
-            <li>handheld</li>
-            <li>tv</li>
-            <li>braille</li>
-            <li>projection</li>
-          </ul>
+          <div data-build> 
+            <ul>关键字
+              <li>screen</li>
+              <li>print</li>
+              <li>handheld</li>
+              <li>tv</li>
+              <li>braille</li>
+              <li>projection</li>
+            </ul>
+          </div>
         </section>
         <section id="slide9" class="step slide rebuild">
           <h2>HTML5的媒体查询</h2>
-          <ul>
-            <li>width(max/min)</li>
-            <li>height(max/min)</li>
-            <li>device-width(max/min)</li>
-            <li>device-height(max/min)</li>
-          </ul>
-          <h2>逻辑运算符</h2>
-          <ul>
-            <li>and</li>
-            <li>not</li>
-            <li>only</li>
-            <li>,(or)</li>
-          </ul>
+          <div data-build> 
+            <ul>关键字
+              <li>width(max/min)</li>
+              <li>height(max/min)</li>
+              <li>device-width(max/min)</li>
+              <li>device-height(max/min)</li>
+              <li>……</li>
+            </ul>
+          </div>
+          <div data-build> 
+            <ul>逻辑运算符
+              <li>and</li>
+              <li>not</li>
+              <li>only</li>
+              <li>,(or)</li>
+            </ul>
+          </div>
         </section>
         <section id="slide10" class="step slide rebuild">
           <h2>例子</h2>
+          <div data-build>
+            <pre class="lang-css">/*只在普通屏幕下,并且,宽度小于959px*/
+@media only screen and (max-width: 959px) {}</pre>
+            <pre class="lang-css">/*宽度小于959px,或,高度小于800px*/
+@media (max-width: 959px),(max-height:800px) {}</pre>
+          </div>
         </section>
         <section id="slide11" class="step slide rebuild">
           <h1>灵活的布局</h1><br>
           <ul>两种不同类型
-            <li>流体布局</li>
+            <li>类流体布局</li>
             <li>栅格布局</li>
           </ul>
         </section>
         <section id="slide12" class="step slide rebuild">
-          <h1>流体布局</h1><br>
-          <div>使用相对长度，通常是百分比或是em</div>
-          <div>代码</div>
-          <div>典型：<a href="http://twitter.github.com/bootstrap/">BootStrap</a></div>
+          <h1>类流体布局</h1><br>
+          <div>与流体布局一样，使用相对长度，通常是百分比或是em</div>
+          <div data-build> 
+            <div>代码
+              <pre class="lang-css">.row-fluid {
+    width: 100%;
+}
+.row-fluid .span3 {
+    font-size: 1.125em;
+}</pre>
+            </div>
+          </div>
+          <div data-build>
+            <div>但在过宽过长时，需要专门针对某些布局结构进行样式覆写</div>
+          </div>
+          <div data-build> 
+            <div>典型：<a href="http://twitter.github.com/bootstrap/examples/fluid.html">Bootstrap fluid</a></div>
+          </div>
         </section>
         <section id="slide13" class="step slide rebuild">
           <h1>固定布局</h1><br>
           <div>使用媒体查询，根据分辨率修改布局</div>
-          <div>代码</div>
-          <div>典型：<a href="http://www.etao.com/?tbpm=t">一淘</a></div>
         </section>
         <section id="slide14" class="step slide rebuild">
+          <div>常用设备分辨率</div><img src="img/breakpoints.jpg" style="width: 35%;height: 85%;">
+        </section>
+        <section id="slide15" class="step slide rebuild">
+          <div>使用媒体查询，根据分辨率修改布局</div>
+          <div data-build> 
+            <div>代码:</div>
+            <pre class="lang-css">/* 正常PC液晶屏样式 */
+/* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
+@media only screen and (max-width: 959px) {}
+/* 仅iPad 竖版，以及所有小于（不等于）标准960宽度的平板电脑的竖版 */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+/* iPhone 及以下 */
+@media only screen and (max-width: 767px) {}
+/* 仅iPhone 横版，包括某些平板电脑的竖版 */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+/* 仅iphone4 竖版 */
+@media only screen and (max-width: 479px) {}</pre>
+          </div>
+          <div data-build> 
+            <div>典型：<a href="http://www.etao.com/?tbpm=t">一淘</a></div>
+          </div>
+        </section>
+        <section id="slide16" class="step slide rebuild">
           <h1>弹性的媒体</h1><br>
           <div>使用百分比设置img、video、canvas的宽度</div>
-          <div>代码:</div>
-          <pre><img>}</pre>
-          <div>典型：<a href="http://d.alistapart.com/responsive-web-design/ex/ex-site-flexible.html">流体图片</a></div>
+          <div data-build> 
+            <div>代码:
+              <pre class="lang-css">img, video, canvas {
+  max-width: 100%;
+}</pre>
+            </div>
+          </div>
+          <div data-build> 
+            <div>典型：<a href="http://d.alistapart.com/responsive-web-design/ex/ex-site-flexible.html">流体图片</a></div>
+          </div>
         </section>
         <section id="slide15" class="step slide rebuild">
           <h1>流体图片造成的问题</h1><br>
-          <div>在小尺寸设备上浪费带宽</div>
+          <div>如果使用大图片，在小尺寸设备上显示浪费带宽</div>
         </section>
         <section id="slide16" class="step slide rebuild">
-          <h1>断点图片</h1><br>
+          <h1>解决方案：断点图片</h1><br>
+          <div data-build>
+            <div>代码:</div>
+            <pre class="lang-css">/* 正常PC液晶屏样式 */
+//图片1
+/* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
+@media only screen and (max-width: 959px) {
+//图片2
+}
+/* 仅iPad 竖版，以及所有小于（不等于）标准960宽度的平板电脑的竖版 */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+//图片3
+}
+……</pre>
+          </div>
         </section>
         <section id="slide17" class="step slide rebuild">
           <h1>咬了一口的苹果</h1>
-          <ul>Apple 视网膜屏带来的问题
+          <div data-build></div>
+          <ul>Apple的视网膜屏(Retina)</ul>
+          <ul>带来的问题
             <li>img图片模糊</li>
           </ul>
         </section>
@@ -197,6 +267,20 @@
     </div>
     <canvas id="myCanvas" width="100%" height="100%">您的浏览器不支持HTML5,请升级或更换您的浏览器,强烈推荐您使用chrome浏览器。</canvas>
     <menu id="slideCtrl" class="controls"><span nclick="location.hash='#cover'" class="tool home">!</span><span class="tool paint">p</span><span class="tool clearIt">d</span></menu>
+    <script src="js/jquery-1.7.2.js"></script>
     <script src="js/webslide.js"></script>
+    <script src="js/google-code-prettify/prettify.js"></script>
+    <script src="js/google-code-prettify/lang-css.js"></script>
+    <script>
+      jQuery(function(){
+         //给pre段落增加class，并调用初始化方法
+          $("pre").each(function(index,item){
+             $(item).addClass("prettyprint").addClass("linenums");
+          });
+          prettyPrint();
+      })
+      
+      
+    </script>
   </body>
 </html>
