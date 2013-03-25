@@ -62,7 +62,6 @@
             <li>响应式设计的要点</li>
             <li>咬了一口的苹果</li>
             <li>还差了点什么？</li>
-            <li>响应式设计是万金油么？</li>
           </ul>
         </section>
         <section id="slide3" class="step slide rebuild">
@@ -75,7 +74,7 @@
         <section id="slide4" class="step slide rebuild">
           <h1>旺仔题</h1>
           <ul>
-            <li>举3个使用响应式设计的网站</li>
+            <li>举2个使用响应式设计的网站</li>
           </ul>
         </section>
         <section id="slide5" class="step slide rebuild">
@@ -139,10 +138,12 @@
         </section>
         <section id="slide11" class="step slide rebuild">
           <h1>灵活的布局</h1><br>
-          <ul>两种不同类型
-            <li>类流体布局</li>
-            <li>栅格布局</li>
-          </ul>
+          <div data-build>
+            <ul>两种不同类型
+              <li>类流体布局</li>
+              <li>栅格布局</li>
+            </ul>
+          </div>
         </section>
         <section id="slide12" class="step slide rebuild">
           <h1>类流体布局</h1><br>
@@ -175,7 +176,7 @@
           <div>使用媒体查询，根据分辨率修改布局</div>
           <div data-build> 
             <div>代码:</div>
-            <pre class="lang-css">/* 正常PC液晶屏样式 */
+            <pre class="lang-css">/* 正常PC屏样式 */
 /* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
 @media only screen and (max-width: 959px) {}
 /* 仅iPad 竖版，以及所有小于（不等于）标准960宽度的平板电脑的竖版 */
@@ -213,7 +214,7 @@
           <h1>解决方案：断点图片</h1><br>
           <div data-build>
             <div>代码:</div>
-            <pre class="lang-css">/* 正常PC液晶屏样式 */
+            <pre class="lang-css">/* 正常PC屏样式 */
 //图片1
 /* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
 @media only screen and (max-width: 959px) {
@@ -228,18 +229,58 @@
         </section>
         <section id="slide17" class="step slide rebuild">
           <h1>咬了一口的苹果</h1>
-          <div data-build></div>
-          <ul>Apple的视网膜屏(Retina)</ul>
-          <ul>带来的问题
-            <li>img图片模糊</li>
+          <div data-build>
+            <div>Apple的视网膜屏(Retina)</div>
+            <ul>带来的问题
+              <li>img图片模糊</li>
+            </ul>
+          </div>
+          <div data-build>
+            <div>原因</div><img src="img/css-device-bitmap-pixels.png">
+          </div>
+        </section>
+        <section id="slide18" class="step slide rebuild">
+          <ul data-build>解决方案
+            <li>针对视网膜屏使用特殊的素材</li>
           </ul>
+          <div data-build>
+            <div>img图片</div>
+            <pre class="lang-css">@media (max-width: 959px) {
+//图片1
+}
+/* 针对视网膜屏 */
+@media (max-width: 959px) and (-webkit-min-device-pixel-ratio: 2){
+//图片1@x2
+}
+@media (max-width: 479px) {
+//图片2
+}
+/* 针对视网膜屏 */
+@media (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2){
+//图片2@x2
+}</pre>
+          </div>
+        </section>
+        <section id="slide19" class="step slide rebuild">
+          <h2>针对小icon更好的方案</h2>
+          <div data-build>
+            <ul>使用矢量素材
+              <li>Icon Fonts</li>
+              <li>svg背景</li>
+            </ul>
+          </div>
+          <div data-build>
+            <div>典型：<a href="http://ux.etao.com/fonts">一淘font</a></div>
+          </div>
         </section>
         <section id="slide18" class="step slide rebuild">
           <h1>还差了点什么？</h1>
-          <ul> 
-            <li>有了面子，还要里子</li>
-            <li>优化手持设备的交互</li>
-          </ul>
+          <div data-build>
+            <ul>
+              <li>有了面子，还要里子</li>
+              <li>优化手持设备的交互</li>
+            </ul>
+          </div>
         </section>
         <section id="slide19" class="step slide rebuild">
           <h1>旺仔题</h1>
@@ -248,16 +289,31 @@
           </ul>
         </section>
         <section id="slide20" class="step slide rebuild">
-          <h1>解决途径</h1>
-          <ul>
-            <li>去除hover交互</li>
+          <div data-build>
+            <div>可能碰到的交互问题</div>
+            <ul> 
+              <li>alibar hover下拉菜单</li>
+              <li>slider切换操作</li>
+              <li>胖手指现象(可点区域小，容易误点)</li>
+            </ul>
+          </div>
+        </section>
+        <section id="slide21" class="step slide rebuild">
+          <h1>总结</h1>
+          <ul data-build>
+            <li>响应式设计的概念</li>
+            <li>响应式设计的要点
+              <ul>
+                <li>CSS3媒体查询</li>
+                <li>灵活的布局</li>
+                <li>弹性的媒体</li>
+              </ul>
+            </li>
+            <li>针对苹果视网膜屏优化</li>
+            <li>移动触屏设备上的交互优化</li>
           </ul>
         </section>
-        <section id="slide18" class="step slide rebuild">
-          <h1>响应式设计是万金油么？</h1>
-          <ul> </ul>
-        </section>
-        <section id="slide10" class="step slide">
+        <section id="slide22" class="step slide">
           <section class="title">
             <h2>Q & A</h2>
           </section>

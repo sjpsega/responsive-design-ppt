@@ -58,7 +58,6 @@ html
                         li 响应式设计的要点
                         li 咬了一口的苹果
                         li 还差了点什么？
-                        li 响应式设计是万金油么？
                 section#slide3.step.slide.rebuild
                     h1 什么是响应式设计
                     ul(data-build)
@@ -67,7 +66,7 @@ html
                 section#slide4.step.slide.rebuild
                     h1 旺仔题
                     ul
-                        li 举3个使用响应式设计的网站
+                        li 举2个使用响应式设计的网站
                 section#slide5.step.slide.rebuild
                     h1 响应式设计的要点
                     ul(data-build)
@@ -117,9 +116,10 @@ html
                 section#slide11.step.slide.rebuild
                     h1 灵活的布局
                     br
-                    ul 两种不同类型
-                        li 类流体布局
-                        li 栅格布局
+                    div(data-build)
+                        ul 两种不同类型
+                            li 类流体布局
+                            li 栅格布局
                 section#slide12.step.slide.rebuild
                     h1 类流体布局
                     br
@@ -150,7 +150,7 @@ html
                     div(data-build) 
                         div 代码:
                         pre.lang-css.
-                            /* 正常PC液晶屏样式 */
+                            /* 正常PC屏样式 */
                             /* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
                             @media only screen and (max-width: 959px) {}
                             /* 仅iPad 竖版，以及所有小于（不等于）标准960宽度的平板电脑的竖版 */
@@ -187,7 +187,7 @@ html
                     div(data-build)
                         div 代码:
                         pre.lang-css.
-                            /* 正常PC液晶屏样式 */
+                            /* 正常PC屏样式 */
                             //图片1
                             /* iPad 及以下，以及所有小于（不等于）960宽度的平板电脑 */
                             @media only screen and (max-width: 959px) {
@@ -201,26 +201,70 @@ html
                 section#slide17.step.slide.rebuild
                     h1 咬了一口的苹果
                     div(data-build)
-                    ul Apple的视网膜屏(Retina)
-                    ul 带来的问题
-                        li img图片模糊
+                        div Apple的视网膜屏(Retina)
+                        ul 带来的问题
+                            li img图片模糊
+                    div(data-build)
+                        div 原因
+                        img(src="img/css-device-bitmap-pixels.png")
+                section#slide18.step.slide.rebuild
+                    ul(data-build) 解决方案
+                        li 针对视网膜屏使用特殊的素材
+                    div(data-build)
+                        div img图片
+                        pre.lang-css.
+                            @media (max-width: 959px) {
+                            //图片1
+                            }
+                            /* 针对视网膜屏 */
+                            @media (max-width: 959px) and (-webkit-min-device-pixel-ratio: 2){
+                            //图片1@x2
+                            }
+                            @media (max-width: 479px) {
+                            //图片2
+                            }
+                            /* 针对视网膜屏 */
+                            @media (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2){
+                            //图片2@x2
+                            }
+                section#slide19.step.slide.rebuild
+                    h2 针对小icon更好的方案
+                    div(data-build)
+                        ul 使用矢量素材
+                            li Icon Fonts
+                            li svg背景
+                    div(data-build)
+                        div 典型：
+                                a(href="http://ux.etao.com/fonts") 一淘font
                 section#slide18.step.slide.rebuild
                     h1 还差了点什么？
-                    ul 
-                        li 有了面子，还要里子
-                        li 优化手持设备的交互
+                    div(data-build)
+                        ul
+                            li 有了面子，还要里子
+                            li 优化手持设备的交互
                 section#slide19.step.slide.rebuild
                     h1 旺仔题
                     ul
                         li 在移动设备上浏览首页，会碰到的交互问题
                 section#slide20.step.slide.rebuild
-                    h1 解决途径
-                    ul
-                        li 去除hover交互
-                section#slide18.step.slide.rebuild
-                    h1 响应式设计是万金油么？
-                    ul 
-                section#slide10.step.slide
+                    div(data-build)
+                        div 可能碰到的交互问题
+                        ul 
+                            li alibar hover下拉菜单
+                            li slider切换操作
+                            li 胖手指现象(可点区域小，容易误点)
+                section#slide21.step.slide.rebuild
+                    h1 总结
+                    ul(data-build)
+                        li 响应式设计的概念
+                        li 响应式设计的要点
+                            ul
+                                li CSS3媒体查询
+                                li 灵活的布局
+                                li 弹性的媒体
+                        li 针对苹果视网膜屏优化
+                        li 移动触屏设备上的交互优化
+                section#slide22.step.slide
                     section.title
                         h2 Q & A
             .progress
