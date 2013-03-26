@@ -24,7 +24,8 @@ module.exports = function( grunt ) {
 	          pretty: true
 	        },
 	        files: {
-	          "index.html": "jade/index.jade"
+	          "index.html": "jade/index.jade",
+	          "test.html": "jade/test.jade"
 	        }
 	      }
 	    },

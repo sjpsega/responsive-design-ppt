@@ -52,7 +52,7 @@ html
                         h1 响应式设计
                         h2 B2B - 沈剑平
                 section#slide2.step.slide.rebuild
-                    h1 分享主题
+                    h1 分享内容
                     ul(data-build)
                         li 什么是响应式设计
                         li 响应式设计的要点
@@ -89,6 +89,7 @@ html
                             li tv
                             li braille
                             li projection
+                            li ……
                 section#slide9.step.slide.rebuild
                     h2 HTML5的媒体查询
                     div(data-build) 
@@ -114,13 +115,35 @@ html
                             /*宽度小于959px,或,高度小于800px*/
                             @media (max-width: 959px),(max-height:800px) {}
                 section#slide11.step.slide.rebuild
+                    h2 引入媒体查询的方式
+                    div(data-build)
+                        ul
+                            li 合并在merge文件中(个人推荐)
+                            li 在link中单独写
+                    br
+                    div(data-build)
+                        div 据说在link中单独写的方式只会在符合条件的情况下加载
+                        pre.lang-html.
+                            <link rel="stylesheet" type="text/css" 
+                            media="screen and (max-width: 600px)" href="tinyScreen.css" />
+                    div(data-build) 
+                        a(href="test.html") 小测试
+                section#slide12.step.slide.rebuild
                     h1 灵活的布局
                     br
                     div(data-build)
                         ul 两种不同类型
                             li 类流体布局
                             li 栅格布局
-                section#slide12.step.slide.rebuild
+                section#slide13.step.slide.rebuild
+                    h1 加入viewprot元标签
+                    div(data-build)
+                        pre.lang-html.
+                            <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    div(data-build)
+                        div 含义：
+                        div 网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0，即网页初始大小占屏幕面积的100%。
+                section#slide14.step.slide.rebuild
                     h1 类流体布局
                     br
                     div 与流体布局一样，使用相对长度，通常是百分比或是em
@@ -138,14 +161,14 @@ html
                     div(data-build) 
                         div 典型：
                             a(href="http://twitter.github.com/bootstrap/examples/fluid.html") Bootstrap fluid
-                section#slide13.step.slide.rebuild
+                section#slide15.step.slide.rebuild
                     h1 固定布局
                     br
                     div 使用媒体查询，根据分辨率修改布局
-                section#slide14.step.slide.rebuild
+                section#slide16.step.slide.rebuild
                     div 常用设备分辨率
                     img(src="img/breakpoints.jpg",style="width: 35%;height: 85%;")
-                section#slide15.step.slide.rebuild
+                section#slide17.step.slide.rebuild
                     div 使用媒体查询，根据分辨率修改布局
                     div(data-build) 
                         div 代码:
@@ -164,7 +187,7 @@ html
                     div(data-build) 
                         div 典型：
                             a(href="http://www.etao.com/?tbpm=t") 一淘
-                section#slide16.step.slide.rebuild
+                section#slide18.step.slide.rebuild
                     h1 弹性的媒体
                     br
                     div 使用百分比设置img、video、canvas的宽度
@@ -177,11 +200,11 @@ html
                     div(data-build) 
                         div 典型：
                             a(href="http://d.alistapart.com/responsive-web-design/ex/ex-site-flexible.html") 流体图片
-                section#slide15.step.slide.rebuild
+                section#slide19.step.slide.rebuild
                     h1 流体图片造成的问题
                     br
                     div 如果使用大图片，在小尺寸设备上显示浪费带宽
-                section#slide16.step.slide.rebuild
+                section#slide20.step.slide.rebuild
                     h1 解决方案：断点图片
                     br
                     div(data-build)
@@ -198,7 +221,7 @@ html
                             //图片3
                             }
                             ……
-                section#slide17.step.slide.rebuild
+                section#slide21.step.slide.rebuild
                     h1 咬了一口的苹果
                     div(data-build)
                         div Apple的视网膜屏(Retina)
@@ -207,27 +230,24 @@ html
                     div(data-build)
                         div 原因
                         img(src="img/css-device-bitmap-pixels.png")
-                section#slide18.step.slide.rebuild
+                section#slide22.step.slide.rebuild
                     ul(data-build) 解决方案
                         li 针对视网膜屏使用特殊的素材
                     div(data-build)
                         div img图片
                         pre.lang-css.
                             @media (max-width: 959px) {
-                            //图片1
+                                width:150px;
+                                height:100px;
+                                //图片1 150X100
+                                background:url("xxxx");
                             }
                             /* 针对视网膜屏 */
                             @media (max-width: 959px) and (-webkit-min-device-pixel-ratio: 2){
-                            //图片1@x2
+                                //图片1@x2 300X200
+                                background:url("xxxx@x2");
                             }
-                            @media (max-width: 479px) {
-                            //图片2
-                            }
-                            /* 针对视网膜屏 */
-                            @media (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2){
-                            //图片2@x2
-                            }
-                section#slide19.step.slide.rebuild
+                section#slide23.step.slide.rebuild
                     h2 针对小icon更好的方案
                     div(data-build)
                         ul 使用矢量素材
@@ -236,24 +256,25 @@ html
                     div(data-build)
                         div 典型：
                                 a(href="http://ux.etao.com/fonts") 一淘font
-                section#slide18.step.slide.rebuild
+                section#slide24.step.slide.rebuild
                     h1 还差了点什么？
                     div(data-build)
                         ul
                             li 有了面子，还要里子
                             li 优化手持设备的交互
-                section#slide19.step.slide.rebuild
+                section#slide25.step.slide.rebuild
                     h1 旺仔题
                     ul
                         li 在移动设备上浏览首页，会碰到的交互问题
-                section#slide20.step.slide.rebuild
+                section#slide26.step.slide.rebuild
                     div(data-build)
                         div 可能碰到的交互问题
                         ul 
                             li alibar hover下拉菜单
                             li slider切换操作
                             li 胖手指现象(可点区域小，容易误点)
-                section#slide21.step.slide.rebuild
+                            li ……
+                section#slide27.step.slide.rebuild
                     h1 总结
                     ul(data-build)
                         li 响应式设计的概念
@@ -264,7 +285,7 @@ html
                                 li 弹性的媒体
                         li 针对苹果视网膜屏优化
                         li 移动触屏设备上的交互优化
-                section#slide22.step.slide
+                section#slide28.step.slide
                     section.title
                         h2 Q & A
             .progress
